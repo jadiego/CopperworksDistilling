@@ -6,10 +6,29 @@
  * Made By MaterializeCSS.com
  */
 
+@import url('https://fonts.googleapis.com/css?family=Convergence|Droid+Sans');
+
+body {
+  font-family: 'Droid-Sans', arial, sans-serif !important;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Convergence', arial, sans-serif !important; 
+}
+
+#sub-header {
+  font-family: 'Droid-Sans', arial, sans-serif !important;
+}
+
 nav ul a,
 nav .brand-logo, .collection-header {
   color: #444;
   text-transform: uppercase;
+}
+
+.slides li img {
+  -webkit-filter: brightness(55%); /* Safari 6.0 - 9.0 */
+  filter: brightness(55%);
 }
 
 .brand-logo img, .brand-logo {
