@@ -1,16 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Copperworks Distillery</title>
-    <link rel="icon" href="img/copperworks.jpeg">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>Parallax Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-    <header>
-        Copperworks Distillery!
-    </header>
-    <div>
+  <div>
+    <ul id="spirits" class="dropdown-content">
+      <li><a href="#!">copperworks whiskey</a></li>
+      <li><a href="#!">copperworks gin</a></li>
+      <li><a href="#!">new barrel gin</a></li>
+      <li><a href="#!">copperworks vodka</a></li>
+      <li><a href="#!">whiskey aging kit</a></li>
+      <li><a href="#!">beyond spirits</a></li>
+      <li><a href="#!">cocktail recipes</a></li>
+    </ul>
+    <ul id="buy" class="dropdown-content">
+      <li><a href="#!">online store</a></li>
+      <li><a href="#!">in retail stores</a></li>
+      <li><a href="#!">find in bars & restaurants</a></li>
+    </ul>
+    <ul id="visit" class="dropdown-content">
+      <li><a href="#!">hours</a></li>
+      <li><a href="#!">tasting and tours</a></li>
+      <li><a href="#!">tour reservations</a></li>
+      <li><a href="#!">rent our event space</a></li>
+      <li><a href="#!">seattle waterfront</a></li>
+      <li><a href="#!">directions and parking</a></li>
+    </ul>
+    <ul id="thedistillery" class="dropdown-content">
+      <li><a href="#!">copper stills</a></li>
+      <li><a href="#!">about distilling</a></li>
+      <li><a href="#!">bottling parties</a></li>
+    </ul>
+    <ul id="about" class="dropdown-content">
+      <li><a href="#!">team</a></li>
+      <li><a href="#!">event space rental</a></li>
+      <li><a href="#!">availability</a></li>
+      <li><a href="#!">newsroom</a></li>
+      <li><a href="#!">contact</a></li>
+    </ul>
+  </div>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo"><img src="img/copperworkslogo.png"></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a class="dropdown-button" href="#!" data-activates="spirits">spirits</a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="buy">buy</a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="visit">visit</a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="thedistillery">the distillery</a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="about">about</a></li>
+        <li><a href="#!">blog</a></li>
+      </ul>
+      <ul id="nav-mobile" class="side-nav collection with-header">
+        <li class="collection-header"><h5>spirits</h5></li>
+        <li class="collection-item"><a href="#!">copperworks whiskey</a></li>
+        <li class="collection-item"><a href="#!">copperworks gin</a></li>
+        <li class="collection-item"><a href="#!">new barrel gin</a></li>
+        <li class="collection-item"><a href="#!">copperworks vodka</a></li>
+        <li class="collection-item"><a href="#!">whiskey aging kit</a></li>
+        <li class="collection-item"><a href="#!">beyond spirits</a></li>
+        <li class="collection-item"><a href="#!">cocktail recipes</a></li>
+
+        <li class="collection-header"><h5>buy</h5></li>
+        <li class="collection-item"><a href="#!">online store</a></li>
+        <li class="collection-item"><a href="#!">in retail stores</a></li>
+        <li class="collection-item"><a href="#!">find in bars & restaurants</a></li>
+
+        <li class="collection-header"><h5>visit</h5></li>
+        <li class="collection-item"><a href="#!">hours</a></li>
+        <li class="collection-item"><a href="#!">tasting and tours</a></li>
+        <li class="collection-item"><a href="#!">tour reservations</a></li>
+        <li class="collection-item"><a href="#!">rent our event space</a></li>
+        <li class="collection-item"><a href="#!">seattle waterfront</a></li>
+        <li class="collection-item"><a href="#!">directions and parking</a></li>
+
+        <li class="collection-header"><h5>the distillery</h5></li>
+        <li class="collection-item"><a href="#!">copper stills</a></li>
+        <li class="collection-item"><a href="#!">about distilling</a></li>
+        <li class="collection-item"><a href="#!">bottling parties</a></li>
+
+        <li class="collection-header"><h5>about</h5></li>
+        <li class="collection-item"><a href="#!">team</a></li>
+        <li class="collection-item"><a href="#!">event space rental</a></li>
+        <li class="collection-item"><a href="#!">availability</a></li>
+        <li class="collection-item"><a href="#!">newsroom</a></li>
+        <li class="collection-item"><a href="#!">contact</a></li>
         
+        <li class="collection-header"><h5>blog</h5></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
-</body>
+  </nav>
+  
+  <div class="slider">
+    <div class="container header-title">
+      <div class="center">
+        <h3  class="light grey-text text-lighten-4">COPPERWORKS WHISKEY NOW AVAILABLE</h3>
+        <h5 class="light grey-text text-lighten-3">Copperworks American Single Malt Whiskey is made from 100% malted barley, twice-distilled in traditional copper pots stills, and matured for no less than 30 months in full-size, charred, new American Oak barrels.</h5>
+      </div>
+    </div>
+    <ul class="slides">
+      <li><img src="img/carousel1.jpeg"></li>
+      <li><img src="img/carousel2.jpeg"></li>
+      <li><img src="img/carousel3.png"></li>
+      <li><img src="img/carousel4.jpeg"></li>
+      <li><img src="img/carousel5.jpeg"></li>
+    </ul>
+  </div>
+
+  <div class="blue-grey lighten-5">
+    <div class="container">
+      <div class="section">
+
+        <div class="row">
+          <div class="col s12 m4">
+            <div class="card hoverable">
+              <div class="card-image">
+                <img src="img/timthumb.jpeg">
+                <span class=" card-title brown-text text-lighten-2 black-trans-bg">BUY OUR SPIRITS ONLINE</span>
+              </div>
+              <div class="card-content">
+                <p>Buy Copperworks spirits, plus cocktail supplies and more, in our online store. We can ship spirits in the U.S. wherever state laws allow.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">Buy Copperworks Spirits Online</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m4">
+            <div class="card hoverable">
+              <div class="card-image">
+                <img src="img/timthumb2.jpeg">
+                <span class="card-title brown-text text-lighten-2 black-trans-bg">TONIC BARREL IS BACK</span>
+              </div>
+              <div class="card-content">
+                <p>Enjoy a single-cask release of gin that was finished in a barrel with a unique history: aging bourbon, gin, tonic syrup, and now Copperworks Gin.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">Learn about Tonic Barrel Gin</a>
+              </div>
+            </div>
+          </div>
+        
+        <div class="col s12 m4">
+            <div class="card hoverable">
+              <div class="card-image">
+                <img src="img/timthumb3.jpeg">
+                <span class=" card-title brown-text text-lighten-2 black-trans-bg">TAKE A DISTILLERY TOUR</span>
+              </div>
+              <div class="card-content">
+                <p>Get a behind-the-scenes look at our stills, barreling process and fermenters. Learn how distilled spirits are made and enjoy a guided tasting.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">Get tour reservations</a>
+              </div>
+            </div>
+          </div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Contact Us</h5>
+          <p class="grey-text text-lighten-4">
+            1250 Alaskan Way</br>
+            Seattle, WA 98101</br>
+            <a class="white-text" href="tel:206.504.7604">206.504.7604</a></br>
+            <a class="white-text" href="mailto:Info@CopperworksDistilling.com">Info@CopperworksDistilling.com</a>
+          </p>
+
+          <p class="white-text">
+            <a class="white-text" href="#!">Get reservations</a> for a tour.
+            </br>
+            <a class="white-text" href="#!">Join</a> our mailing list.
+          </p>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      <p>© 2012–2016. Copperworks Distilling. All Rights Reserved</p>
+      <p><a href="#!">Privacy Statement</a> | <a href="#!">Terms of Service</a> </p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
 </html>
