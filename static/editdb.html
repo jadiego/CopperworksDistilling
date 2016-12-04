@@ -113,9 +113,9 @@
     </div>
     <div class="row">
         <form class="col s12 m6 push-m3 section">
-
+            <h3 class="teal-text center">Brew Information</h3>
             <!--Recipe-->
-            <h5 class="col s12">Recipe</h5>
+            <h5 class="col s12">Recipe Used:</h5>
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">label_outline</i>
@@ -132,6 +132,26 @@
                     <input type="date" class="datepicker" id="brew-date">
                     <label for="brew-date">Brew Date</label>
                 </div>
+            </div>
+
+             <!--Ingredients-->
+            <h5 class="col s12">Recipe Ingredients:</h5>
+            <div id="ingredients" class="row">
+                <div class="ingredient-row">
+                    <div class="input-field col s5">
+                        <input id="ingredient-name" type="text" class="validate">
+                        <label for="ingredient-name">Name</label>
+                    </div>
+                    <div class="input-field col s5">
+                        <input id="ingredient-source" type="text" class="validate">
+                        <label for="ingredient-source">Source</label>
+                    </div>
+                    <div class="input-field col s2">
+                        <input id="ingredient-%" type="text" class="validate">
+                        <label for="ingredient-%">%</label>
+                    </div>
+                </div>
+                <a id="add-ingredient" class="col s2 offset-s10 btn waves-effect waves-light"><i class="material-icons">add</i></a>
             </div>
 
             <!--Brew Extra Data-->
@@ -154,26 +174,8 @@
                 </div>
             </div>
 
-            <!--Ingredients-->
-            <h5 class="col s12">Brew Recipe Ingredients:</h5>
-            <div id="ingredients" class="row">
-                <div class="ingredient-row">
-                    <div class="input-field col s5">
-                        <input id="ingredient-name" type="text" class="validate">
-                        <label for="ingredient-name">Name</label>
-                    </div>
-                    <div class="input-field col s5">
-                        <input id="ingredient-source" type="text" class="validate">
-                        <label for="ingredient-source">Source</label>
-                    </div>
-                    <div class="input-field col s2">
-                        <input id="ingredient-%" type="text" class="validate">
-                        <label for="ingredient-%">%</label>
-                    </div>
-                </div>
-                <a id="add-ingredient" class="col s2 offset-s10 btn waves-effect waves-light"><i class="material-icons">add</i></a>
-            </div>
-
+            <!--Phases-->
+            <h3 class="teal-text center">Brew Phases</h3>
             <h5 class="col s12">Phases:</h5>
             <div id="phases" class="row">
                 <div class="phase-row">
