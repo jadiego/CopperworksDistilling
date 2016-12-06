@@ -1,4 +1,4 @@
 .env
 .DS_Store
 /secret/*
-/secret/*.template
+!/secret/*.template
