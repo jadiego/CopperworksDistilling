@@ -6,8 +6,11 @@ var server = 8080;
 
 var app = express();
 
-mssql.connect("mssql://username:password@localhost/database").then(function() {
-    new sql.Request().query('SELECT * FROM Release').then(function(recordset) {
+var dbConfig = require('./secret/mssql.json')
+//var dbConn = new mssql.Connection(dbConfig);
+
+mssql.connect(dbConfig).then(function() {
+    new mssql.Request().query('SELECT * FROM tblBrew').then(function(recordset) {
         console.dir(recordset);
     }).catch(function(err) {
         console.dir(err);
