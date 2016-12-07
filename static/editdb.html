@@ -114,9 +114,31 @@
         <h2 class=" center">Input Forms</h2>
     </div>
 
-    <!-- New Recipe -->
     <div class="row" ng-controller="EditDBController">
         <form class="col s12 m6 push-m3 section">
+
+            <h3 class="col s12">Create Brew</h3>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">label_outline</i>
+                    <input id="recipe-name" type="text" class="validate" ng-model="recipename">
+                    <label for="recipe-name">Brew Name</label>
+                </div>
+
+                <h6 class="col s12">Brew Info:</h6>
+                <div id="brew" class="row">
+                    <div class="ibrew-row">
+                        <div class="input-field col s6">
+                            <input id="brew-num" type="text" class="validate" ng-model="iname">
+                            <label for="brew-num">Brew Number</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="brew-date" type="date" class="datepicker" ng-model="ipercent">
+                            <label for="brew-date">Begin Date</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <h3 class="col s12">Create Recipe</h3>
             <div class="row">
@@ -145,95 +167,9 @@
                     <a id="add-ingredient" class="col s2 offset-s10 btn waves-effect waves-light"><i class="material-icons">add</i></a>
                 </div>
             </div>
+
             <div class="col s12">
                 <button class="btn waves-effect waves-light" type="submit" ng-click="submitNewRecipe()" name="action">Submit
-                <i class="material-icons right">send</i>
-                </button>
-            </div>
-        </form>
-    </div>
-
-    <div class="divider"></div>
-    
-    <div class="row">
-        <form class="col s12 m6 push-m3 section">
-            <h3 class="col s12">Create Brew</h3>
-            <!--Brew Extra Data-->
-            <h6 class="col s12">Brew Info</h6>
-            <div class="row">
-                <div class="input-field col s5">
-                    <i class="material-icons prefix">schedule</i>
-                    <input id="boil-time" type="number" placeholder="34" class="validate">
-                    <label for="boil-time">Boil Time (minutes)</label>
-                </div>
-                <div class="input-field col push-s2 s5">
-                    <i class="material-icons prefix">today</i>
-                    <input id="sg" placeholder="12.3456" type="number" class="validate">
-                    <label for="sg">Original Extract (S.G.)</label>
-                </div>
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">mode_edit</i>
-                    <textarea id="brew-notes" placeholder="Hops types, quantities added, etc" class="materialize-textarea"></textarea>
-                    <label for="brew-notes">Special Notes</label>
-                </div>
-            </div>
-
-
-            <h5 class="col s12">Phases:</h5>
-            <div id="phases" class="row">
-                <div class="phase-row">
-                    <div class="input-field col s12">
-                        <select id="phase-select">
-                            <option value="" disabled selected>Choose your option</option>
-                            <option value="fermentation">Fermentation</option>
-                            <option value="washdistil">Wash Distillation</option>
-                            <option value="whiskeydistil">Whiskey Distillation</option>
-                            <option value="mature">Maturation</option>
-                            <option value="barrel">Barreling</option>
-                        </select>
-                        <label>Phase Name</label>
-                    </div>
-                    <div class="phase-info">
-                        <div class="hide fermentation-info">
-                            <div class="input-field col s5">
-                                <input id="ferment-volume" type="text" class="validate">
-                                <label for="ferment-volume">Volume (gal)</label>
-                            </div>
-                            <div class="input-field col push-s2 s5">
-                                <input id="ferment-temp" type="number" class="validate">
-                                <label for="ferment-temp">Fermentation Temp (&#8457;)</label>
-                            </div>
-                            <div class="input-field col s12">
-                                <input id="yeast-strain" type="text" class="validate">
-                                <label for="yeast-strain">Yeast Strain</label>
-                            </div>
-                            <div class="input-field col s4">
-                                <input id="ferment-f-days" type="number" class="validate">
-                                <label for="ferment-f-days">Days in Fermentation</label>
-                            </div>
-                            <div class="input-field col s4">
-                                <input id="ferment-abv" type="number" class="validate">
-                                <label for="ferment-abv">Wash Final % ABV</label>
-                            </div>
-                            <div class="input-field col s4">
-                                <input id="ferment-ph" type="number" class="validate">
-                                <label for="ferment-ph">Wash Final pH</label>
-                            </div>
-                            <div class="input-field col s4">
-                                <input id="ferment-ph" type="number" class="validate">
-                                <label for="ferment-ph">Days in Conditioning</label>
-                            </div>
-                            <div class="input-field col s4">
-                                <input id="ferment-ph" type="number" class="validate">
-                                <label for="ferment-ph">Conditioning Temp (&#8457;)</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a id="add-phase" class="col s2 offset-s10 btn waves-effect waves-light"><i class="material-icons">add</i></a>
-            </div>
-            <div class="col s12">
-                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
                 <i class="material-icons right">send</i>
                 </button>
             </div>
