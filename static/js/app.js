@@ -1,18 +1,20 @@
-angular.module('CopperWorksApp', [])
-.controller('DBReleaseController', ['$scope', '$http', function($scope, $http) {
+var app = angular.module('CopperWorksApp', []);
+
+// app.service('ReadArray', function() {
+//     this.getData = function(data) {
+//         return data;
+//     }
+// });
+
+app.controller('DBReleaseController', ['$scope', '$http', function($scope, $http) {
     'use strict';
     $http.get('/api/brews').success(function(data) {
-        $scope.brewid = data[0].BrewID;
-        $scope.brewnum = data[0].BrewNum;
-        $scope.name = data[0].BrewName;
-        $scope.date = data[0].BrewDate;
-        console.log(data);
+        $scope.data = data[0];
     })
-}])
+}]);
 
-.controller('EditDBController', ['$scope', '$http', function($scope, $http) {
+app.controller('EditDBController', ['$scope', '$http', function($scope, $http) {
     $scope.submitNewRecipe = function() {
-        console.log("submitting new recipe")
         var data = {
             bname: $scope.bname,
             bnumber: $scope.bnumber,
@@ -22,11 +24,11 @@ angular.module('CopperWorksApp', [])
             ipercent: $scope.ipercent
         }
         //console.log(data);
-        $http.post('/api/brews', data).success(function(response) {
-            //console.log(response);
+        $http.post('/api/brews/' + $scope.bnumber, data).success(function(response) {
+            console.log(response);
         }).catch(function(response) {
-            //console.log(response);
+            console.log(response);
         })
     }
-}])
+}]);
 

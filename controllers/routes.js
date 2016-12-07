@@ -10,7 +10,7 @@ module.exports = function(app) {
     app.get('/api/brews', function(req, res) {
         console.log("successfully GET brew data!");
         mssql.connect(dbConfig).then(function() {
-            new mssql.Request().query('SELECT * FROM tblBrew').then(function(recordset) {
+            new mssql.Request().execute('getBrewInformation').then(function(recordset) {
                 console.dir(recordset);
                 res.json(recordset)
             }).catch(function(err) {
@@ -23,48 +23,25 @@ module.exports = function(app) {
         });
     });
 
-    //GET request for getting basic Release data.
-    app.get('/api/releases', function(req, res) {
-        mssql.connect(dbConfig).then(function() {
-            new mssql.Request().query('SELECT * FROM tblRelease').then(function(recordset) {
-                console.dir(recordset);
-                res.json(recordset)
-            }).catch(function(err) {
-                console.dir(err);
-                res.json(err)
-            });
-        }).catch(function(err) {
-            console.dir(err);
-            res.json(err)
-        });
-        mssql.close();
-    });
-
-    //POST request for adding information on Brews.
-    // app.post('/api/brews', function(req, res) {
-    //     mssql.connect(dbConfig).then(function() {
-    //         new mssql.Request().query().then(function(recordset) {
-    //             console.dir(recordset);
-            
-    //         }).catch(function(err) {
-
-    //         });
-    //     }).catch(function(err) {
-            
-    //     });
-    // });
-
-    //POST request for adding information about 
-    app.post('/api/brews', function(req, res) {
+    //POST request for adding information about Brews
+    app.post('/api/brews/:id', function(req, res) {
+        console.log("inside the post");
         console.log(req.body);
-        // mssql.connect(dbConfig).then(function() {
-        //     new mssql.Request().input('IngredientName', sql.Varchar, '').then(function(recordset) {
-                
-        //     }).catch(function(err) {
-
-        //     });
-        // }).catch(function(err) {
-            
-        // });
+        mssql.connect(dbConfig).then(function() {
+            new mssql.Request()
+            .input('IngredientName', mssql.VarChar(50), req.body.iname)
+            .input('IngredientSource', mssql.VarChar(50), req.body.isource)
+            .input('Quantity', mssql.VarChar(5), req.body.ipercent)
+            .input('BrewName', mssql.VarChar(10), req.body.bname)
+            .input('BrewNum', mssql.VarChar(15), req.body.bnumber)
+            .input('BrewDate', mssql.Date, req.body.bdate)
+            .execute('BrewPopulate').then(function(recordsets) {
+                console.dir(recordsets)
+            }).catch(function(err) {
+                console.dir(err)
+            });
+        }).catch(function(err) {
+            console.dir(err)
+        });
     });
 }

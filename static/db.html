@@ -117,26 +117,18 @@
   <div class="section container" ng-app="CopperWorksApp" ng-controller="DBReleaseController">
     <table class="responsive-table">
       <thead>
-        <th>Release Number: </th>
-        <th>Release Date:</th>
+        <th>Brew Name: </th>
+        <th>Brew Date:</th>
+        <th>Ingredient Name: </th>
+        <th>Quantity (%): </th>
+        <th>Source Name: </th>
       </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>11/4/14</td>
-        </tr>
-        <tr>
-          <td>BrewID : {{ brewid }} <td>  
-        <tr>
-          <tr>
-          <td>Brew Name: {{ name }}<td>  
-        <tr>
-          <tr>
-          <td>Brew Number: {{ brewnum }}<td>  
-        <tr>
-          <tr>
-          <td>Brew Date: {{ date }} <td>  
-        <tr>
+      <tbody ng-repeat="element in data">
+        <td>{{ element.BrewName[0] }}</td>
+        <td>{{ element.BrewDate }}</td>
+        <td>{{ element.IngredientName }}</td>
+        <td>{{ element.Quantity }}</td>
+        <td>{{ element.SourceName }}</td>
       </tbody>
     </table>
   </div>
