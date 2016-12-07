@@ -57,7 +57,6 @@ module.exports = function(app) {
     //POST request for adding information about 
     app.post('/api/brews', function(req, res) {
         console.log(req.body);
-        console.log(res);
         // mssql.connect(dbConfig).then(function() {
         //     new mssql.Request().input('IngredientName', sql.Varchar, '').then(function(recordset) {
                 

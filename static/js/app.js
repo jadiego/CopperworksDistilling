@@ -6,7 +6,6 @@ angular.module('CopperWorksApp', [])
         $scope.brewnum = data[0].BrewNum;
         $scope.name = data[0].BrewName;
         $scope.date = data[0].BrewDate;
-        console.log("sdfsdfsdf");
         console.log(data);
     })
 }])
@@ -14,26 +13,20 @@ angular.module('CopperWorksApp', [])
 .controller('EditDBController', ['$scope', '$http', function($scope, $http) {
     $scope.submitNewRecipe = function() {
         console.log("submitting new recipe")
-        // var data = {
-        //     bname: $scope.bname,
-        //     bnumber: $scope.bnumber,
-        //     bdate: $scope.bdate,
-        //     iname: $scope.iname,
-        //     isource: $scope.isource,
-        //     ipercent: $scope.ipercent
-        // }
-        var data = $.param({
-            json: JSON.stringify({
+        var data = {
             bname: $scope.bname,
             bnumber: $scope.bnumber,
             bdate: $scope.bdate,
             iname: $scope.iname,
             isource: $scope.isource,
             ipercent: $scope.ipercent
-            })
-        });
-        $http.post('/api/brews', data).success(function(data, status) {
-            console.log(data);
+        }
+        //console.log(data);
+        $http.post('/api/brews', data).success(function(response) {
+            //console.log(response);
+        }).catch(function(response) {
+            //console.log(response);
         })
     }
 }])
+
