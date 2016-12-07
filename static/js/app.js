@@ -8,5 +8,6 @@ angular.module('CopperWorksApp', [])
             $scope.date = data.BrewDate;
             console.log("sdfsdfsdf");
             console.log(data);
-        })
+        });
+        
     }])
