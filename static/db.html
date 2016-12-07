@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
   <title>Copperworks Distilling</title>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script src="js/app.js"></script>
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -112,8 +114,8 @@
       <h2 class=" center">Whiskey Release Database</h2>
   </div>
 
-  <div class="section container">
-    <table>
+  <div class="section container" ng-app="CopperWorksApp" ng-controller="DBReleaseController">
+    <table class="responsive-table">
       <thead>
         <th>Release Number:</th>
         <th>Release Date:</th>
