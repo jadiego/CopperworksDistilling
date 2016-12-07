@@ -21,7 +21,6 @@ module.exports = function(app) {
             console.dir(err);
             res.json(err)
         });
-        mssql.close();
     });
 
     //GET request for getting basic Release data.
