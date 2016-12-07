@@ -10,7 +10,7 @@ var app = express();
 //dbConfig for connecting to the MSSQL Server Database.
 var dbConfig = require('./secret/mssql.json')
 
-require('./controllers/routes.js');
+require('./controllers/routes.js')(app);
 
 //Connect to the database and do a SELECT all statement on tblBrew.
 // mssql.connect(dbConfig).then(function() {

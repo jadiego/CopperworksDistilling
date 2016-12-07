@@ -6,5 +6,7 @@ angular.module('CopperWorksApp', [])
             $scope.brewnum = data.BrewNum;
             $scope.name = data.BrewName;
             $scope.date = data.BrewDate;
+            console.log("sdfsdfsdf");
+            console.log(data);
         })
     }])
