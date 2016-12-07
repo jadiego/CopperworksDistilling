@@ -121,7 +121,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">label_outline</i>
-                    <input id="recipe-name" type="text" class="validate" ng-model="recipename">
+                    <input id="recipe-name" type="text" class="validate" ng-model="bname">
                     <label for="recipe-name">Brew Name</label>
                 </div>
 
@@ -129,35 +129,27 @@
                 <div id="brew" class="row">
                     <div class="ibrew-row">
                         <div class="input-field col s6">
-                            <input id="brew-num" type="text" class="validate" ng-model="iname">
+                            <input id="brew-num" type="text" class="validate" ng-model="bnumber">
                             <label for="brew-num">Brew Number</label>
                         </div>
                         <div class="input-field col s6">
-                            <input id="brew-date" type="date" class="datepicker" ng-model="ipercent">
-                            <label for="brew-date">Begin Date</label>
+                            <input id="brew-date" type="date" ng-model="bdate">
                         </div>
                     </div>
                 </div>
             </div>
 
-            <h3 class="col s12">Create Recipe</h3>
             <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">label_outline</i>
-                    <input id="recipe-name" type="text" class="validate" ng-model="recipename">
-                    <label for="recipe-name">Recipe Name</label>
-                </div>
-
-                <h6 class="col s12">Brew Recipe Ingredients:</h6>
+                <h6 class="col s12">Recipe Ingredients:</h6>
                 <div id="ingredients" class="row">
                     <div class="ingredient-row">
                         <div class="input-field col s5">
                             <input id="ingredient-name" type="text" class="validate" ng-model="iname">
-                            <label for="ingredient-name">Name</label>
+                            <label for="ingredient-name">Ingredient Name</label>
                         </div>
                         <div class="input-field col s5">
                             <input id="ingredient-source" type="text" class="validate" ng-model="isource">
-                            <label for="ingredient-source">Source</label>
+                            <label for="ingredient-source">Ingredient Source</label>
                         </div>
                         <div class="input-field col s2">
                             <input id="ingredient-%" type="text" class="validate" ng-model="ipercent">
