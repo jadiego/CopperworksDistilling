@@ -1,8 +1,7 @@
 angular.module('CopperWorksApp', [])
-
 .controller('DBReleaseController', ['$scope', '$http', function($scope, $http) {
     'use strict';
-    $http.get('/api/releases').success(function(data) {
+    $http.get('/api/brews').success(function(data) {
         $scope.brewid = data[0].BrewID;
         $scope.brewnum = data[0].BrewNum;
         $scope.name = data[0].BrewName;
