@@ -2,10 +2,9 @@
 
 var mssql = require('mssql');
 var dbConfig  = require('../secret/mssql.json');
-console.log("In routes");
 
 module.exports = function(app) {
-    console.log("In exports");
+    
     //GET request for getting basic brew data.
     app.get('/api/brews', function(req, res) {
         console.log("successfully GET brew data!");
