@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="CopperWorksApp">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
   <title>Copperworks Distilling</title>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script src="js/app.js"></script>
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -109,33 +111,55 @@
   </nav>
 
     <div class="grey darken-4 white-text section">
-        <h2 class=" center">Input Brew Information</h2>
+        <h2 class=" center">Input Forms</h2>
     </div>
-    <div class="row">
+
+    <!-- New Recipe -->
+    <div class="row" ng-controller="EditDBController">
         <form class="col s12 m6 push-m3 section">
 
-            <!--Recipe-->
-            <h5 class="col s12">Recipe</h5>
+            <h3 class="col s12">Create Recipe</h3>
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">label_outline</i>
-                    <input id="recipe-name" type="text" class="validate">
+                    <input id="recipe-name" type="text" class="validate" ng-model="recipename">
                     <label for="recipe-name">Recipe Name</label>
                 </div>
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">info</i>
-                    <input id="recipe-description" type="text" class="validate">
-                    <label for="recipe-description">Recipe Description</label>
-                </div>
-                <div class="input-field col s5">
-                    <i class="material-icons prefix">today</i>
-                    <input type="date" class="datepicker" id="brew-date">
-                    <label for="brew-date">Brew Date</label>
+
+                <h6 class="col s12">Brew Recipe Ingredients:</h6>
+                <div id="ingredients" class="row">
+                    <div class="ingredient-row">
+                        <div class="input-field col s5">
+                            <input id="ingredient-name" type="text" class="validate" ng-model="iname">
+                            <label for="ingredient-name">Name</label>
+                        </div>
+                        <div class="input-field col s5">
+                            <input id="ingredient-source" type="text" class="validate" ng-model="isource">
+                            <label for="ingredient-source">Source</label>
+                        </div>
+                        <div class="input-field col s2">
+                            <input id="ingredient-%" type="text" class="validate" ng-model="ipercent">
+                            <label for="ingredient-%">%</label>
+                        </div>
+                    </div>
+                    <a id="add-ingredient" class="col s2 offset-s10 btn waves-effect waves-light"><i class="material-icons">add</i></a>
                 </div>
             </div>
+            <div class="col s12">
+                <button class="btn waves-effect waves-light" type="submit" ng-click="submitNewRecipe()" name="action">Submit
+                <i class="material-icons right">send</i>
+                </button>
+            </div>
+        </form>
+    </div>
 
+    <div class="divider"></div>
+    
+    <div class="row">
+        <form class="col s12 m6 push-m3 section">
+            <h3 class="col s12">Create Brew</h3>
             <!--Brew Extra Data-->
-            <h5 class="col s12">Brew Info</h5>
+            <h6 class="col s12">Brew Info</h6>
             <div class="row">
                 <div class="input-field col s5">
                     <i class="material-icons prefix">schedule</i>
@@ -154,25 +178,6 @@
                 </div>
             </div>
 
-            <!--Ingredients-->
-            <h5 class="col s12">Brew Recipe Ingredients:</h5>
-            <div id="ingredients" class="row">
-                <div class="ingredient-row">
-                    <div class="input-field col s5">
-                        <input id="ingredient-name" type="text" class="validate">
-                        <label for="ingredient-name">Name</label>
-                    </div>
-                    <div class="input-field col s5">
-                        <input id="ingredient-source" type="text" class="validate">
-                        <label for="ingredient-source">Source</label>
-                    </div>
-                    <div class="input-field col s2">
-                        <input id="ingredient-%" type="text" class="validate">
-                        <label for="ingredient-%">%</label>
-                    </div>
-                </div>
-                <a id="add-ingredient" class="col s2 offset-s10 btn waves-effect waves-light"><i class="material-icons">add</i></a>
-            </div>
 
             <h5 class="col s12">Phases:</h5>
             <div id="phases" class="row">
