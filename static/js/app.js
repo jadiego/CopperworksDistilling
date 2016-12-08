@@ -11,6 +11,10 @@ app.controller('DBReleaseController', ['$scope', '$http', function($scope, $http
     $http.get('/api/brews').success(function(data) {
         $scope.data = data[0];
     })
+
+    $scope.deleteBrew = function() {
+        $http.delete('/api/brews' + $scope.bnumber)
+    }
 }]);
 
 app.controller('EditDBController', ['$scope', '$http', function($scope, $http) {

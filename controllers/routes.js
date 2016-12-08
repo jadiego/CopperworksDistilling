@@ -4,7 +4,7 @@ var mssql = require('mssql');
 var dbConfig  = require('../secret/mssql.json');
 
 module.exports = function(app) {
-    
+
     //GET request for getting basic brew data.
     app.get('/api/brews', function(req, res) {
         console.log("successfully GET brew data!");
@@ -42,5 +42,16 @@ module.exports = function(app) {
         }).catch(function(err) {
             console.dir(err)
         });
+    });
+
+    app.delete('/api/brews/:id', function(req, res) {
+        mssql.connect(dbConfig).then(function() {
+            new mssql.Request().query('DELETE FROM tblBrew WHERE BrewNum = ' + req.body.bnumber)
+            .then(function(recordset) {
+                console.dir(recordset);
+            }).catch(function(err) {
+
+            });
+        })
     });
 }
