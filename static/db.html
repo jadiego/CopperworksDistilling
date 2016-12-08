@@ -115,17 +115,17 @@
   </div>
 
   <div class="section container" ng-app="CopperWorksApp" ng-controller="DBReleaseController">
-    <table class="responsive-table">
+    <table class="responsive-table highlight">
       <thead>
-        <th>Brew Name: </th>
         <th>Brew Date:</th>
+        <th>Brew Name: </th>
         <th>Ingredient Name: </th>
         <th>Quantity (%): </th>
         <th>Source Name: </th>
       </thead>
-      <tbody ng-repeat="element in data">
+      <tbody ng-repeat="element in data | orderBy:'-BrewDate'">
+        <td>{{ element.BrewDate | date }}</td>
         <td>{{ element.BrewName[0] }}</td>
-        <td>{{ element.BrewDate }}</td>
         <td>{{ element.IngredientName }}</td>
         <td>{{ element.Quantity }}</td>
         <td>{{ element.SourceName }}</td>
